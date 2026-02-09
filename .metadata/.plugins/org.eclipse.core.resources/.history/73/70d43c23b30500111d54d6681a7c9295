@@ -1,0 +1,97 @@
+package Aste1;
+
+public class Pelikula {
+	
+	private String izena;
+	
+	private int iraupena;
+	
+	private String zuzendaria;
+	
+	private String generoa;
+	
+	private double irabaziak;
+	
+	private int zenbatAktore;
+	
+	public Pelikula(String izena, int iraupena, String zuzendaria, String generoa, double irabaziak, int zenbatAktore) {
+		this.izena=izena;
+		this.iraupena=iraupena;
+		this.zuzendaria=zuzendaria;
+		this.generoa=generoa;
+		this.irabaziak=irabaziak;
+		this.zenbatAktore=zenbatAktore;
+	}
+
+	
+	
+	
+	@Override
+	public String toString() {
+		
+		return "Pelikula [izena=" + izena + ", iraupena=" + iraupena/60 + " ordu " + iraupena%60+ " minutu" + ", zuzendaria=" + zuzendaria + ", generoa="
+				+ generoa + ", irabaziak=" + irabaziak + ", zenbatAktore=" + zenbatAktore + "]";
+	}
+
+
+
+
+	public boolean luzeaDa() {
+		if(iraupena>120) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+	
+	
+
+	public int getZenbatAktore() {
+		return zenbatAktore;
+	}
+
+
+
+
+	public void setZenbatAktore(int zenbatAktore) {
+		this.zenbatAktore = zenbatAktore;
+	}
+
+
+
+
+	public static void main(String[] args) {
+		Pelikula p1=new Pelikula("El libro de la jungla",87,"Maxwell", "Accion", 4, 3);
+		
+		String aktoreGazteena="";
+		int adinaMin=99;
+		
+		
+	
+		for(int i=1; i<p1.zenbatAktore; i++) {
+			System.out.println("Sartu aktorearen izena");
+			String izenaAktorea=Kontsola.irakurriString();
+			
+			System.out.println("Sartu aktorearen adina");
+			int adinaAktorea=Kontsola.irakurriInt();
+			if(adinaAktorea<adinaMin) {
+				adinaMin=adinaAktorea;
+				aktoreGazteena=izenaAktorea;
+			}
+		}
+		System.out.println("Aktore gazteena: "+aktoreGazteena);
+		
+		System.out.println(p1.toString());
+		System.out.println(p1.luzeaDa());
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+
+}

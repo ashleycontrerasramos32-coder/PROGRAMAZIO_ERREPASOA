@@ -62,13 +62,20 @@ public class Pelikula {
 
 
 	public static void main(String[] args) {
-		Pelikula p1=new Pelikula("El libro de la jungla",87,"Maxwell", "Accion", 4, 3);
+		Pelikula p1=new Pelikula("El libro de la jungla",87,"Rudyard", "Accion", 4, 3);
+		Pelikula p2=new Pelikula("El niño con pijama de rayas", 102, "John Boyne", "Drama", 6, 4);
+		Pelikula p3=new Pelikula("Jumanji", 130, "Joe", "Accion", 5, 5);
+		
+		
+		
 		
 		String aktoreGazteena="";
 		int adinaMin=99;
+		int pelikulaGuztiak=0;
+		int irabaziakGuztira=0;
+		String pelikulaZuzendariGehienIrabazi="";
 		
 		
-	
 		for(int i=1; i<p1.zenbatAktore; i++) {
 			System.out.println("Sartu aktorearen izena");
 			String izenaAktorea=Kontsola.irakurriString();
@@ -79,11 +86,79 @@ public class Pelikula {
 				adinaMin=adinaAktorea;
 				aktoreGazteena=izenaAktorea;
 			}
+			if(p1.irabaziak>irabaziakGuztira) {
+				irabaziakGuztira+=p1.irabaziak;
+				pelikulaGuztiak++;
+			}
+			if(p1.irabaziak>p2.irabaziak || p1.irabaziak>p3.irabaziak || p2.irabaziak>p3.irabaziak) {
+				pelikulaZuzendariGehienIrabazi=p1.zuzendaria;
+			}
+		
+		
+			
 		}
 		System.out.println("Aktore gazteena: "+aktoreGazteena);
 		
 		System.out.println(p1.toString());
 		System.out.println(p1.luzeaDa());
+		
+
+		for(int i=1; i<p2.zenbatAktore; i++) {
+			System.out.println("Sartu aktorearen izena");
+			String izenaAktorea=Kontsola.irakurriString();
+			
+			System.out.println("Sartu aktorearen adina");
+			int adinaAktorea=Kontsola.irakurriInt();
+			if(adinaAktorea<adinaMin) {
+				adinaMin=adinaAktorea;
+				aktoreGazteena=izenaAktorea;
+			}
+			
+			if(p2.irabaziak>irabaziakGuztira) {
+				irabaziakGuztira+=p2.irabaziak;
+				pelikulaGuztiak++;
+			}
+			if(p2.irabaziak>p3.irabaziak || p2.irabaziak>p1.irabaziak || p3.irabaziak>p1.irabaziak) {
+				pelikulaZuzendariGehienIrabazi=p2.zuzendaria;
+			}
+			
+		}
+		System.out.println("Aktore gazteena: "+aktoreGazteena);
+		
+		System.out.println(p2.toString());
+		System.out.println(p2.luzeaDa());
+		
+
+		for(int i=1; i<p3.zenbatAktore; i++) {
+			System.out.println("Sartu aktorearen izena");
+			String izenaAktorea=Kontsola.irakurriString();
+			
+			System.out.println("Sartu aktorearen adina");
+			int adinaAktorea=Kontsola.irakurriInt();
+			if(adinaAktorea<adinaMin) {
+				adinaMin=adinaAktorea;
+				aktoreGazteena=izenaAktorea;
+			}
+			
+			if(p3.irabaziak>irabaziakGuztira) {
+				irabaziakGuztira+=irabaziakGuztira;
+				pelikulaGuztiak++;
+			}
+			if(p3.irabaziak>p2.irabaziak || p3.irabaziak>p1.irabaziak ||p2.irabaziak<p1.irabaziak) {
+				pelikulaZuzendariGehienIrabazi=p3.zuzendaria;
+			}
+			
+		}
+		System.out.println("Aktore gazteena: "+aktoreGazteena);
+		
+		System.out.println(p3.toString());
+		System.out.println(p3.luzeaDa());
+		
+		System.out.println("Gehien irabazi duen pelikularen zuzendaria: "+pelikulaZuzendariGehienIrabazi);
+		
+		
+		System.out.println("Pelikula guztien irabazitako batazbestekoa: "+irabaziakGuztira/pelikulaGuztiak);
+		
 		
 		
 		
