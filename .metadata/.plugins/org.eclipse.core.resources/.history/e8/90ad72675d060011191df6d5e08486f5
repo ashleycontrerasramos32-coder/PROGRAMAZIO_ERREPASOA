@@ -1,0 +1,81 @@
+package Aste1;
+
+public class Triangelua {
+	
+	private int filak;
+	
+	public Triangelua(int filak) {
+		this.filak=filak;
+	}
+	
+	public void marraztuA(char karakterea) {
+		
+		filak=4;
+		
+		for (int i = 1; i <= filak; i++) { // LAS FILAS 
+			for (int j = 1; j <= i; j++) { // LAS COLUMNAS 
+				System.out.print("*"); // IMPRIME ESTO 
+			}
+			System.out.println(); // SALTO DE LINEA
+		}
+	}
+	
+	public void marraztuB(char karakterea) {
+		filak=4;
+		
+		for(int i=filak; i>=1; i--) { // HAY 4 FILAS, EL BUCLE EMPIEZA CON LOS 4 ASTERISCOS
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
+	
+	public void marraztuC(char karakterea) {
+		
+		filak=4;
+		
+		for(int i=0; i<filak; i++) {
+			System.out.print("*");
+		}
+		System.out.println();
+		
+		
+		for( ) {
+			
+		}
+		
+
+	}
+	
+	public void marraztuD(char karakterea) {
+		int filak=4;
+		for(int i=filak; i<=filak; i++) {
+			
+		}
+		for() {
+			
+		}
+			
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Triangelua t1=new Triangelua(4);
+		Triangelua t2=new Triangelua(4);
+		Triangelua t3=new Triangelua(4);
+		
+		t1.marraztuA('*');
+		System.out.println();
+		t2.marraztuB('*');
+		System.out.println();
+		t3.marraztuC('*');
+		
+	}
+	
+	
+
+}

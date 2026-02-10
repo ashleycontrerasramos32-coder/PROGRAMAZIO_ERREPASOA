@@ -1,0 +1,50 @@
+package Aste1;
+
+public class Triangelua {
+	
+	private int filak;
+	
+	public Triangelua(int filak) {
+		this.filak=filak;
+	}
+	
+	public void marraztuA(char karakterea) {
+		
+		filak=4;
+		
+		for (int i = 1; i <= filak; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void marraztuB(char karakterea) {
+		filak=4;
+		
+		for(int i=1; i>=filak; i--) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Triangelua t1=new Triangelua(4);
+		Triangelua t2=new Triangelua(4);
+		
+		t1.marraztuA('*');
+		System.out.println();
+		t2.marraztuB('*');
+		
+	}
+	
+	
+
+}
