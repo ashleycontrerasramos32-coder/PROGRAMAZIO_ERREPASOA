@@ -14,7 +14,7 @@ public class Triangelua {
 		
 		for (int i = 1; i <= filak; i++) { // LAS FILAS 
 			for (int j = 1; j <= i; j++) { // LAS COLUMNAS 
-				System.out.print("*"); // IMPRIME ESTO 
+				System.out.print(karakterea); // IMPRIME ESTO 
 			}
 			System.out.println(); // SALTO DE LINEA
 		}
@@ -25,38 +25,50 @@ public class Triangelua {
 		
 		for(int i=filak; i>=1; i--) { // HAY 4 FILAS, EL BUCLE EMPIEZA CON LOS 4 ASTERISCOS
 			for(int j=1; j<=i; j++) {
-				System.out.print("*");
+				System.out.print(karakterea);
 			}
 			System.out.println();
 		}
 		
 	}
 	
+	/*
+	public void marraztuB(char karakterea) {
+		
+		for(int i=0; i<this.filak; i++) { // HAY 4 FILAS, EL BUCLE EMPIEZA CON LOS 4 ASTERISCOS
+			for(int j=this.filak; j>=i; j--) {
+				System.out.print(karakterea);
+			}
+			System.out.println();
+		}
+		
+	}
+	*/
+
+	
 	public void marraztuC(char karakterea) {
 		
-		filak=4;
-		
-		for(int i=1; i<filak; i++) {
-			System.out.print(" ");
+		for(int i=0;i<this.filak;i++) {
+			for(int j=0; j<this.filak-1-i;j++) {
+				System.out.print(' ');
+			}
+			for(int j=0;j<=i;j++) {
+				System.out.print(karakterea);
+			}
+			System.out.println();
 		}
-		System.out.println("*");
-		
-		for(int j=2; j<=filak; j++) {
-			System.out.print("*");
-		}
-		System.out.println();
-		
-		
 
 	}
 	
 	public void marraztuD(char karakterea) {
-		int filak=4;
-		for(int i=filak; i<=filak; i++) {
-			
-		}
-		for() {
-			
+		for(int i=0; i<this.filak;i++) {
+			for(int j=0; j<i; j++) {
+				System.out.print(' ');
+			}
+			for(int j=0; j<this.filak-i;j++) {
+				System.out.print(karakterea);
+			}
+			System.out.println();
 		}
 			
 	}
@@ -68,12 +80,15 @@ public class Triangelua {
 		Triangelua t1=new Triangelua(4);
 		Triangelua t2=new Triangelua(4);
 		Triangelua t3=new Triangelua(4);
+		Triangelua t4=new Triangelua(4);
 		
 		t1.marraztuA('*');
 		System.out.println();
 		t2.marraztuB('*');
 		System.out.println();
 		t3.marraztuC('*');
+		System.out.println();
+		t4.marraztuD('*');
 		
 	}
 	
