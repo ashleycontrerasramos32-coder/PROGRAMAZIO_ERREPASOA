@@ -1,0 +1,22 @@
+package Aste1;
+
+public class Kotxea extends Ibilgailua {
+	
+	private int martxaKop;
+
+	public Kotxea(String marka, int gasolina, int gastua, float altuera, int abiaduraMax, int martxaKop) {
+		super(marka, gasolina, gastua, altuera, abiaduraMax);
+		this.martxaKop = martxaKop;
+	}
+
+	@Override
+	public String toString() {
+		
+		return super.toString()+"Kotxea [martxaKop=" + martxaKop + "]";
+		
+	}
+	
+	
+	
+
+}
