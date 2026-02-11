@@ -74,6 +74,7 @@ public class Pelikula {
 		int pelikulaGuztiak=0;
 		int irabaziakGuztira=0;
 		String pelikulaZuzendariGehienIrabazi="";
+		String pelikula_AktoreGutxien="";
 		
 		
 		for(int i=1; i<p1.zenbatAktore; i++) {
@@ -90,9 +91,24 @@ public class Pelikula {
 				irabaziakGuztira+=p1.irabaziak;
 				pelikulaGuztiak++;
 			}
-			if(p1.irabaziak>p2.irabaziak || p1.irabaziak>p3.irabaziak || p2.irabaziak>p3.irabaziak) {
-				pelikulaZuzendariGehienIrabazi=p1.zuzendaria;
-			}
+			
+			if (p1.irabaziak>p2.irabaziak && p1.irabaziak>p3.irabaziak) {
+		       	pelikulaZuzendariGehienIrabazi=p1.zuzendaria;
+		       	
+		    } else if (p2.irabaziak>p1.irabaziak && p2.irabaziak>p3.irabaziak) {
+		    	   pelikulaZuzendariGehienIrabazi=p2.zuzendaria;
+		    	   
+		    }else {
+		    	   pelikulaZuzendariGehienIrabazi=p3.zuzendaria;
+		    }
+			
+			if(p1.zenbatAktore<p2.zenbatAktore && p1.zenbatAktore<p3.zenbatAktore) {
+		       	pelikula_AktoreGutxien=p1.izena;
+		    } else if (p2.zenbatAktore<p3.zenbatAktore && p2.zenbatAktore<p1.zenbatAktore) {
+		       	pelikula_AktoreGutxien=p2.izena;
+		    } else {
+		       	pelikula_AktoreGutxien=p3.izena;
+		    }
 		
 		
 			
@@ -118,9 +134,23 @@ public class Pelikula {
 				irabaziakGuztira+=p2.irabaziak;
 				pelikulaGuztiak++;
 			}
-			if(p2.irabaziak>p3.irabaziak || p2.irabaziak>p1.irabaziak || p3.irabaziak>p1.irabaziak) {
-				pelikulaZuzendariGehienIrabazi=p2.zuzendaria;
-			}
+			if (p1.irabaziak>p2.irabaziak && p1.irabaziak>p3.irabaziak) {
+		       	pelikulaZuzendariGehienIrabazi=p1.zuzendaria;
+		       	
+		    } else if (p2.irabaziak>p1.irabaziak && p2.irabaziak>p3.irabaziak) {
+		    	   pelikulaZuzendariGehienIrabazi=p2.zuzendaria;
+		    	   
+		    }else {
+		    	   pelikulaZuzendariGehienIrabazi=p3.zuzendaria;
+		    }
+			
+			if(p1.zenbatAktore<p2.zenbatAktore && p1.zenbatAktore<p3.zenbatAktore) {
+		       	pelikula_AktoreGutxien=p1.izena;
+		    } else if (p2.zenbatAktore<p3.zenbatAktore && p2.zenbatAktore<p1.zenbatAktore) {
+		       	pelikula_AktoreGutxien=p2.izena;
+		    } else {
+		       	pelikula_AktoreGutxien=p3.izena;
+		    }
 			
 		}
 		System.out.println("Aktore gazteena: "+aktoreGazteena);
@@ -144,9 +174,26 @@ public class Pelikula {
 				irabaziakGuztira+=irabaziakGuztira;
 				pelikulaGuztiak++;
 			}
-			if(p3.irabaziak>p2.irabaziak || p3.irabaziak>p1.irabaziak ||p2.irabaziak<p1.irabaziak) {
-				pelikulaZuzendariGehienIrabazi=p3.zuzendaria;
-			}
+			
+			if (p1.irabaziak>p2.irabaziak && p1.irabaziak>p3.irabaziak) {
+		       	pelikulaZuzendariGehienIrabazi=p1.zuzendaria;
+		       	
+		    } else if (p2.irabaziak>p1.irabaziak && p2.irabaziak>p3.irabaziak) {
+		    	   pelikulaZuzendariGehienIrabazi=p2.zuzendaria;
+		    	   
+		    }else {
+		    	   pelikulaZuzendariGehienIrabazi=p3.zuzendaria;
+		    }
+			
+			if(p1.zenbatAktore<p2.zenbatAktore && p1.zenbatAktore<p3.zenbatAktore) {
+		       	pelikula_AktoreGutxien=p1.izena;
+		    } else if (p2.zenbatAktore<p3.zenbatAktore && p2.zenbatAktore<p1.zenbatAktore) {
+		       	pelikula_AktoreGutxien=p2.izena;
+		    } else {
+		       	pelikula_AktoreGutxien=p3.izena;
+		    }
+		       
+			
 			
 		}
 		System.out.println("Aktore gazteena: "+aktoreGazteena);
@@ -154,12 +201,16 @@ public class Pelikula {
 		System.out.println(p3.toString());
 		System.out.println(p3.luzeaDa());
 		
+	    //Gehien irabazi duen pelikularen zuzendaria erakutsi.
 		System.out.println("Gehien irabazi duen pelikularen zuzendaria: "+pelikulaZuzendariGehienIrabazi);
 		
 		
+	    //Pelikula guztien batazbesteko irabazia erakutsi.
 		System.out.println("Pelikula guztien irabazitako batazbestekoa: "+irabaziakGuztira/pelikulaGuztiak);
 		
 		
+	    //Aktore gutxien dituen pelikularen izena erakutsi.
+		System.out.println("Aktore gutxien dituen pelikularen izena: "+pelikula_AktoreGutxien);
 		
 		
 		
