@@ -1,0 +1,54 @@
+package Aste1;
+
+public class Kotxea extends Ibilgailua {
+	
+	private int martxaKop;
+
+	public Kotxea(String marka, int gasolina, int gastua, float altuera, int abiaduraMax, int martxaKop) {
+		super(marka, gasolina, gastua, altuera, abiaduraMax);
+		this.martxaKop = martxaKop;
+	}
+
+	@Override
+	public String toString() {
+		
+		return super.toString()+"Kotxea [martxaKop=" + martxaKop + "]";
+		
+	}
+
+	@Override
+	public int zenbatDenboraIristeko(int distantzia) {
+		
+		int beharrezkoGasolina=distantzia*getGastua();
+		
+		if(beharrezkoGasolina<=getGasolina()) {
+			
+			
+			setGasolina(getGasolina()-beharrezkoGasolina);
+			
+			
+			
+		} else {
+			return -1;
+		}
+
+	}
+
+	@Override
+	public boolean pasaDaiteke(float altuera) {
+		if(altuera>getAltuera()) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public static void main(String[] args) {
+		Kotxea k1=new Kotxea("Tucson", 56, 20, (float) 1.5, 120, 5);
+	}
+	
+	
+	
+
+}

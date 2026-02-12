@@ -62,7 +62,28 @@ public abstract class Ibilgailua {
 	public void setGastua(int gastua) {
 		this.gastua = gastua;
 	}
+
+
+	public String getMarka() {
+		return marka;
+	}
+
+
+	public void setMarka(String marka) {
+		this.marka = marka;
+	}
+
+
+	public float getAltuera() {
+		return altuera;
+	}
+
+
+	public void setAltuera(float altuera) {
+		this.altuera = altuera;
+	}
 		
+	
 	
 	
 	

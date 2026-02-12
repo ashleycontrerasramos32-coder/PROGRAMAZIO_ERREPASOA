@@ -18,20 +18,53 @@ public class Kotxea extends Ibilgailua {
 
 	@Override
 	public int zenbatDenboraIristeko(int distantzia) {
-		if(getGasolina()==getGastua()*distantzia) {
-			return 
-		} else 
-		return -1 ;
+		
+		int beharrezkoGasolina=distantzia*getGastua();
+		
+		if(beharrezkoGasolina<=getGasolina()) {
+			
+			
+			setGasolina(getGasolina()-beharrezkoGasolina);
+			
+			int zenbatDenbora;
+			
+			zenbatDenbora=distantzia/getAbiaduraMax();
+			
+			return zenbatDenbora;
+			
+			
+			
+		} else {
+			return -1;
+		}
+		
+
 	}
 
 	@Override
 	public boolean pasaDaiteke(float altuera) {
-		// TODO Auto-generated method stub
-		return false;
+		if(altuera>getAltuera()) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public static void main(String[] args) {
 		Kotxea k1=new Kotxea("Tucson", 56, 20, (float) 1.5, 120, 5);
+		
+		System.out.println(k1.toString());
+		
+		System.out.println();
+		
+		System.out.println(k1.pasaDaiteke(2));
+		
+		System.out.println();
+		
+		System.out.println(k1.zenbatDenboraIristeko(150));
+		
+		
 	}
 	
 	
