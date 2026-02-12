@@ -17,27 +17,14 @@ public class Kotxea extends Ibilgailua {
 	}
 
 	@Override
-	public int zenbatDenboraIristeko(int distantzia) {
+	public float zenbatDenboraIristeko(int distantzia) {
 		
-		int beharrezkoGasolina=distantzia*getGastua();
-		
-		if(beharrezkoGasolina<=getGasolina()) {
+		if(this.getGasolina()/this.getGastua()<distantzia) return -1; 
+			float gastuTotala=this.getGastua()*distantzia;
+			this.setGasolina(this.getGasolina()-gastuTotala);
+			float denboraMinututan=(float)distantzia/this.getAbiaduraMax()*60;
+			return denboraMinututan;
 			
-			
-			setGasolina(getGasolina()-beharrezkoGasolina);
-			
-			int zenbatDenbora;
-			
-			zenbatDenbora=distantzia/getAbiaduraMax();
-			
-			return zenbatDenbora;
-			
-			
-			
-		} else {
-			return -1;
-		}
-		
 
 	}
 
@@ -52,7 +39,7 @@ public class Kotxea extends Ibilgailua {
 	}
 	
 	public static void main(String[] args) {
-		Kotxea k1=new Kotxea("Tucson", 56, 20, (float) 1.5, 120, 5);
+		Kotxea k1=new Kotxea("Tucson", 50, 120, 1.5f, 3, 5);
 		
 		System.out.println(k1.toString());
 		
