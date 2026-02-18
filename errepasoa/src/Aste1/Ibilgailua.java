@@ -4,7 +4,7 @@ public abstract class Ibilgailua {
 	
 	private String marka;
 	
-	private int gasolina;
+	private float gasolina;
 	
 	private int gastua;
 	
@@ -28,18 +28,18 @@ public abstract class Ibilgailua {
 				+ ", abiaduraMax=" + abiaduraMax + "]";
 	}
 		
-	public abstract int zenbatDenboraIristeko(int distantzia);
+	public abstract float zenbatDenboraIristeko(int distantzia);
 	
 	
 	public abstract boolean pasaDaiteke(float altuera);
 
 
-	public int getGasolina() {
+	public float getGasolina() {
 		return gasolina;
 	}
 
 
-	public void setGasolina(int gasolina) {
+	public void setGasolina(float gasolina) {
 		this.gasolina = gasolina;
 	}
 

@@ -16,14 +16,17 @@ public class Kotxea extends Ibilgailua {
 		
 	}
 
-	@Override
 	public float zenbatDenboraIristeko(int distantzia) {
 		
 		if(this.getGasolina()/this.getGastua()<distantzia) return -1; 
-			float gastuTotala=this.getGastua()*distantzia;
-			this.setGasolina(this.getGasolina()-gastuTotala);
-			float denboraMinututan=(float)distantzia/this.getAbiaduraMax()*60;
-			return denboraMinututan;
+		
+		float gastuTotala=this.getGastua()*distantzia;
+		
+		this.setGasolina(this.getGasolina()-gastuTotala);
+		
+		float denboraMinututan=(float)distantzia/this.getAbiaduraMax()*60;
+		
+		return denboraMinututan;
 			
 
 	}

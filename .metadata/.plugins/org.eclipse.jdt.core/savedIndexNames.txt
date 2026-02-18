@@ -1,3 +1,4 @@
 INDEX VERSION 1.134+C:\Users\dw1b\Desktop\ASHLEY_PROGRAMAZIOA_ERREPASOA\.metadata\.plugins\org.eclipse.jdt.core
+1875018587.index
 1486935453.index
 1865797976.index
