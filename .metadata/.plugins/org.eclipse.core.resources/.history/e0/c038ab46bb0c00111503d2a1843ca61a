@@ -9,9 +9,7 @@ public class ZenbatHitz {
 		
 		int kont=0;
 		
-		
 		for(int i=0; i<esaldia.length(); i++) {
-			
 			char letra=esaldia.charAt(i);
 			if('a'>=letra && letra<='z') {
 				kont++;
@@ -28,7 +26,7 @@ public class ZenbatHitz {
 	
 	public static void main(String[] args) {
 		
-		String str="kaixo zer";
+		String str="Kaixo zer moduz";
 		
 		System.out.println(zenbatHitz(str));
 		

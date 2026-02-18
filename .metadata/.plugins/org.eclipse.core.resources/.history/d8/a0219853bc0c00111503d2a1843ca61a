@@ -13,7 +13,7 @@ public class ZenbatHitz {
 		for(int i=0; i<esaldia.length(); i++) {
 			
 			char letra=esaldia.charAt(i);
-			if('a'>=letra && letra<='z') {
+			if('a'>=esaldia.charAt(letra) && esaldia.charAt(letra)<='z') {
 				kont++;
 			}
 			
