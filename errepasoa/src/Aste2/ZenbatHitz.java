@@ -1,26 +1,11 @@
 package Aste2;
 
 public class ZenbatHitz {
-	
-	/*Esaldi batean zenbat hitz dauden itzuliko den metodoa estatikoa */
+		
 	
 	public static int zenbatHitz(String esaldia) {
 		
 		
-		int kont=0;
-		
-		
-		for(int i=0; i<esaldia.length(); i++) {
-			
-			char letra=esaldia.charAt(i);
-			if('a'>=letra && letra<='z') {
-				kont++;
-			}
-			
-		}
-		return kont;
-		
-
 		
 	
 		
@@ -28,9 +13,8 @@ public class ZenbatHitz {
 	
 	public static void main(String[] args) {
 		
-		String str="kaixo zer";
-		
-		System.out.println(zenbatHitz(str));
+		zenbatHitz("Kaixo ZER moduz?");
+		System.out.println();
 		
 		
 	}

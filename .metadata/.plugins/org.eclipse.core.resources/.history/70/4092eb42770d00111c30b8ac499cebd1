@@ -1,0 +1,39 @@
+package Aste2;
+
+public class ZenbatHitz {
+		
+	
+	public static void zenbatMaiusMinus(String esaldia) {
+		
+		
+		int kontMaius=0;
+
+		int kontMinus=0;
+		
+		for(int i=0; i<esaldia.length(); i++) {
+			
+			if(esaldia.charAt(i)!=' ') {
+
+				if(esaldia.charAt(i)==esaldia.toUpperCase().charAt(i)) kontMaius++;
+				else kontMinus++;
+			}
+			
+			
+		}
+		System.out.println(kontMaius);
+		System.out.println(kontMinus);
+
+		
+	
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		zenbatMaiusMinus("Kaixo ZER moduz?");
+		System.out.println();
+		
+		
+	}
+
+}

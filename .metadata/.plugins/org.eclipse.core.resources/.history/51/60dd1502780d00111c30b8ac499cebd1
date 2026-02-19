@@ -1,0 +1,8 @@
+package kontaktua;
+
+public interface Balidagarria {
+	
+	boolean balidatu();
+	
+
+}
