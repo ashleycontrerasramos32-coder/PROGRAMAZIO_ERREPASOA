@@ -1,8 +1,12 @@
 package kontaktu;
 
-public   abstract class Kontaktua implements Balidagarria { // NO SE PUEDE INSTANCIAR
+public abstract class Kontaktua implements Balidagarria { // NO SE PUEDE INSTANCIAR
 	
 	private boolean baliozkoa;
+	
+	public Kontaktua () {
+		super();
+	}
 
 	public boolean isBaliozkoa() {
 		return baliozkoa;

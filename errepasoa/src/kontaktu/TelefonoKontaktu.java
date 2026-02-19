@@ -14,12 +14,44 @@ public class TelefonoKontaktu extends Kontaktua implements Balidagarria {
 	@Override
 	public boolean balidatu() {
 		
+		if(telefonoa==null) {
+			setBaliozkoa(false);
+			mota=' ';
+			return false;
+		}
+		
+		for(int i=0; i<telefonoa.length(); i++ ) {
+			if(telefonoa.charAt(i)<'0' || telefonoa.charAt(i)>'9' ) {
+				setBaliozkoa(false);
+				mota=' ';
+				return false;
+			}
+		}
+		
+		
+			if(telefonoa.charAt(0)=='9') {
+				mota='F';
+				
+			} else {
+				mota='M';
+			}
+			setBaliozkoa(true);
+		
+			return true;
+
+		
 		
 		// TODO Auto-generated method stub
-		return false;
 		
 		
 	}
+
+	@Override
+	public String toString() {
+		return "TelefonoKontaktu [telefonoa=" + telefonoa + ", mota=" + mota + "]";
+	}
+	
+	
 	
 	
 	

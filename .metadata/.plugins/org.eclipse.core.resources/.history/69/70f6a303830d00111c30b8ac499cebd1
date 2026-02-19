@@ -1,0 +1,48 @@
+package kontaktu;
+
+public class TelefonoKontaktu extends Kontaktua implements Balidagarria {
+	
+	private String telefonoa;
+	
+	private char mota; 
+	
+	public TelefonoKontaktu(String telefonoa) {
+		this.telefonoa=telefonoa;
+		balidatu();
+	}
+
+	@Override
+	public boolean balidatu() {
+		
+		for(int i=0; i<telefonoa.length(); i++ ) {
+			if( telefonoa!=null && ) {
+				baliozkoa=true;
+			}
+		}
+		
+		for(int i=0; i<telefonoa.length(); i++) {
+			if() {
+				mota='F';
+			} 
+			if else {
+				mota='M';
+			}
+			else {
+				mota=' ';
+			}
+		}
+		
+		
+		// TODO Auto-generated method stub
+		return false;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+
+}
