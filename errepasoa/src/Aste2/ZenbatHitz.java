@@ -5,7 +5,18 @@ public class ZenbatHitz {
 	
 	public static int zenbatHitz(String esaldia) {
 		
+		int hitzak=0;
 		
+		String aux=esaldia.trim();
+		
+		int i=0;
+		
+		while(aux.indexOf(' ')!=-1) {
+			aux=aux.substring(i).trim();
+			i++;
+		}
+		
+		return hitzak+1;
 		
 	
 		
@@ -13,8 +24,7 @@ public class ZenbatHitz {
 	
 	public static void main(String[] args) {
 		
-		zenbatHitz("Kaixo ZER moduz?");
-		System.out.println();
+		System.out.println(zenbatHitz("Kaixo ZER moduz?"));
 		
 		
 	}

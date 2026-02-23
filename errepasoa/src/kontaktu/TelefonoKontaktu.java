@@ -45,6 +45,23 @@ public class TelefonoKontaktu extends Kontaktua implements Balidagarria {
 		
 		
 	}
+	
+
+	public String getTelefonoa() {
+		return telefonoa;
+	}
+
+	public void setTelefonoa(String telefonoa) {
+		this.telefonoa = telefonoa;
+	}
+
+	public char getMota() {
+		return mota;
+	}
+
+	public void setMota(char mota) {
+		this.mota = mota;
+	}
 
 	@Override
 	public String toString() {

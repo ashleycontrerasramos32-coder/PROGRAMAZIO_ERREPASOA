@@ -52,16 +52,49 @@ public class PostaKontaktua extends Kontaktua implements Balidagarria {
 			return false;
 		}
 		
+		for (int i=0; i<postaElektronikoa.length(); i++) {
+			if(postaElektronikoa.charAt(i)<'0' || postaElektronikoa.charAt(i)>'9' || 
+					postaElektronikoa.charAt(i)!=' ') { // NI NUMEROS NI ESPACIOS
+				setBaliozkoa(false);
+				return false;
+			}
+			
+			if(postaElektronikoa.charAt(i)<'A' || postaElektronikoa.charAt(i)>'Z' || 
+					postaElektronikoa.charAt(i)!=' ') { //NI LETRAS NI ESPACIOS
+				setBaliozkoa(false);
+				return false;
+			}
+			
+			if(postaElektronikoa.charAt(i)!='.' || postaElektronikoa.charAt(i)!='@' || postaElektronikoa.charAt(i)!='-' || 
+					postaElektronikoa.charAt(i)!=' '  ) { //NO PUEDE TENER: ., -, @
+				setBaliozkoa(false);
+				return false;
+			}
+		}
+		
 		
 		// TODO Auto-generated method stub
 		return true;
+		
 	}
 	
-	public static void main(String[] args) {
-		PostaKontaktua p1=new PostaKontaktua("ashleycontreras@gmail.co");
+	private boolean letraDigituaDa(char karakterea) {
 		
-		System.out.println(p1.balidatu());
+		for(int i=0; i<postaElektronikoa.length();i++) {
+			if() {
+				return true;
+			}
+			
+		}
+		
+		return false;
+		
+		
+		
 	}
+	
+	
+	
 	
 	
 
