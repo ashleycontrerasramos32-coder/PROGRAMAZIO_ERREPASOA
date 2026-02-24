@@ -46,16 +46,43 @@ public abstract class Pertsona {
 		
 	}
 	
-	abstract int ordainketaKalkulatu(double oinarrizkoPrezioa) // CLASE ABSTRACTA
+	public Pertsona() {
+		super();
+	}
 	
-	
-	
+	abstract double ordainketaKalkulatu(double oinarrizkoPrezioa) // CLASE ABSTRACTA
 	;
 
 	@Override
 	public String toString() { //METODO TOSTRING
 		return "Pertsona [izena=" + izena + ", abizena=" + abizena + ", nan=" + nan + "]";
 	}
+
+	public String getIzena() {
+		return izena;
+	}
+
+	public void setIzena(String izena) {
+		this.izena = izena;
+	}
+
+	public String getAbizena() {
+		return abizena;
+	}
+
+	public void setAbizena(String abizena) {
+		this.abizena = abizena;
+	}
+
+	public String getNan() {
+		return nan;
+	}
+
+	public void setNan(String nan) {
+		this.nan = nan;
+	}
+	
+	
 	
 	
 

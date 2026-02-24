@@ -2,16 +2,16 @@ package Aste3;
 
 public class Punto {
 	
-	private int x;
+	private double x;
 	
-	private int y;
+	private double y;
 	
-	public Punto(int x, int y) {
+	public Punto(double x, double y) {
 		this.x=x;
 		this.y=y;
 	}
 
-	public int getX() {
+	public double getX() {
 		return x;
 	}
 
@@ -19,7 +19,7 @@ public class Punto {
 		this.x = x;
 	}
 
-	public int getY() {
+	public double getY() {
 		return y;
 	}
 

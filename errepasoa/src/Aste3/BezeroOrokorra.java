@@ -1,7 +1,17 @@
 package Aste3;
 
-public class BezeroOrokorra {
-	
+public class BezeroOrokorra extends Pertsona {
+
+	public BezeroOrokorra(String izena, String abizena, String nan) {
+		super(izena, abizena, nan);
+		
+	}
+
+	@Override
+	double ordainketaKalkulatu(double oinarrizkoPrezioa) {
+		// TODO Auto-generated method stub
+		return oinarrizkoPrezioa;
+	}
 	
 
 }

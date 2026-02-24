@@ -1,0 +1,19 @@
+package Aste3;
+
+public class Gela {
+	
+	private int gelaZenbakia;
+	
+	private double oinarrizkoPrezioa;
+	
+	private boolean okupatua;
+	
+	BezeroOrokorra b;
+	
+	public Gela(int gelaZenbakia, double oinarrizkoPrezioa) {
+		this.gelaZenbakia=gelaZenbakia;
+		this.oinarrizkoPrezioa=oinarrizkoPrezioa;
+	}
+	
+	
+}

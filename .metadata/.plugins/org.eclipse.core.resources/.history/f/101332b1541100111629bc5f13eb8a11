@@ -1,0 +1,26 @@
+package Aste3;
+
+public class VIPBezeroa extends Pertsona implements Deskontagarria {
+	
+	private double deskontuPortzentaia;
+
+	public VIPBezeroa(String izena, String abizena, String nan, double deskontuPortzentaia) {
+		super(izena, abizena, nan);
+		this.deskontuPortzentaia=deskontuPortzentaia;
+	}
+
+	@Override
+	double ordainketaKalkulatu(double oinarrizkoPrezioa) {
+		// TODO Auto-generated method stub
+		return deskontuaAplikatu(oinarrizkoPrezioa);
+	}
+
+	@Override
+	public double deskontuaAplikatu(double hasierakoPrezioa) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+
+}

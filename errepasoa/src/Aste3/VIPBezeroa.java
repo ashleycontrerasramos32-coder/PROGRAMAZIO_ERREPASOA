@@ -1,0 +1,59 @@
+package Aste3;
+
+public class VIPBezeroa extends Pertsona implements Deskontagarria {
+	
+	private double deskontuPortzentaia;
+
+	public VIPBezeroa(String izena, String abizena, String nan, double deskontuPortzentaia) {
+		super(izena, abizena, nan);
+		this.deskontuPortzentaia=deskontuPortzentaia;
+				
+		String kateBakarra="";
+		String aux=kateBakarra.trim();
+		
+		for(int i=0; i<izena.length(); i++) {
+			for(int j=0; j<abizena.length();j++) {
+				kateBakarra="Izena: "+izena+" eta abizena: "+abizena;
+			}
+		}
+		System.out.println(aux);
+		
+		
+		
+	}
+
+	@Override
+	double ordainketaKalkulatu(double oinarrizkoPrezioa) {
+		// TODO Auto-generated method stub
+		return deskontuaAplikatu(oinarrizkoPrezioa);
+	}
+
+	@Override
+	public double deskontuaAplikatu(double hasierakoPrezioa) {
+		// TODO Auto-generated method stub
+		double emaitza;
+		
+		emaitza=hasierakoPrezioa*(deskontuPortzentaia/100);
+		
+		
+		return emaitza;
+	}
+
+	public double getDeskontuPortzentaia() {
+		return deskontuPortzentaia;
+	}
+
+	public void setDeskontuPortzentaia(double deskontuPortzentaia) {
+		this.deskontuPortzentaia = deskontuPortzentaia;
+	}
+
+	@Override
+	public String toString() {
+		return "VIPBezeroa [deskontuPortzentaia=" + deskontuPortzentaia + ", toString()=" + super.toString() + "]";
+	}
+	
+	
+	
+	
+
+}

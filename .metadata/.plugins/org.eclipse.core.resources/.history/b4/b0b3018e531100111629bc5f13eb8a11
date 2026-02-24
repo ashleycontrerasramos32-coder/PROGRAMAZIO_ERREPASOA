@@ -1,0 +1,6 @@
+package Aste3;
+
+public interface Deskontagarria {
+
+	public double deskontuaAplikatu(double hasierakoPrezioa);
+}
