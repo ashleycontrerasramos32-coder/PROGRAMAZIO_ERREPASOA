@@ -1,0 +1,31 @@
+package Aste3;
+
+public class Hotel {
+	
+	private Gela [][] gelenMatrizea;
+	
+	private String erreserbak [];
+	
+	
+	public Hotel(int solairuKop, int gelaKop) {
+		
+		
+		this.gelenMatrizea=new Gela[solairuKop][gelaKop];
+		
+		erreserbak=new String[2000];
+		
+		int kontErreserbak=0;
+		
+		for (int i = 0; i < solairuKop ; i++) {
+			for (int j = 0; j < gelaKop; j++) {
+				
+			}
+			
+		}
+
+
+	}
+	
+	
+	
+}

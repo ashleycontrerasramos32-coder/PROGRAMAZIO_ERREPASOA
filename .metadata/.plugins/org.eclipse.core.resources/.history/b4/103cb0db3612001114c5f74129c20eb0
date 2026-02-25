@@ -1,0 +1,51 @@
+package Aste3;
+
+public class Gela {
+	
+	private int gelaZenbakia;
+	
+	private double oinarrizkoPrezioa;
+	
+	private boolean okupatua;
+	
+	private Pertsona p;
+	
+	public Gela(int gelaZenbakia, double oinarrizkoPrezioa) {
+		this.gelaZenbakia=gelaZenbakia;
+		this.oinarrizkoPrezioa=oinarrizkoPrezioa;
+		okupatua=false;
+	}
+	
+	public boolean bezeroaEsleitu(Pertsona p) {
+
+		if(p.getIzena()!=null || p.getAbizena()!=null || p.getNan()!=null) {
+			this.p=p;
+			okupatua=true;
+			return true;
+		}
+		
+		return false;
+		
+	}
+	public void gelaLibratu() {
+		
+		p=null;
+		
+		
+		okupatua=false;
+		
+		
+	}
+	
+	public double leihoraDistantziaKalkulatu(Punto p) {
+		
+		double distantzia=0;
+		
+		distantzia=Math.sqrt(Math.pow(p.getX(), 2))+(Math.pow(p.getY(), 2));
+	
+		return distantzia;
+		
+	}
+	
+	
+}

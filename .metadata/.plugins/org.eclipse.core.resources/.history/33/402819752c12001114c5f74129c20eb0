@@ -1,0 +1,27 @@
+package Aste3;
+
+public class Hotel {
+	
+	private Gela [][] gelenMatrizea;
+	
+	private String erreserbak [];
+	
+	
+	public Hotel(int solairuKop, int gelaKop) {
+		solairuKop=0;
+		
+		gelaKop=0;
+		
+		this.gelenMatrizea=new Gela[solairuKop][gelaKop];
+		
+		int kontErreserbak=0;
+		
+
+	}
+	
+	public boolean erreserbatu(,Pertsona p) {
+		
+	}
+
+	
+}

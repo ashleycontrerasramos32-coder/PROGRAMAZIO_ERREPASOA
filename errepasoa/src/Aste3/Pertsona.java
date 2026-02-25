@@ -8,23 +8,20 @@ public abstract class Pertsona {
 	
 	private String nan;
 
-	public Pertsona(String izena, String abizena, String nan) {
-		this.izena = izena;
-		this.abizena = abizena;
-		this.nan = nan;
+	public Pertsona(String ize, String abiz, String dni) {
+		izena = ize;
+		abizena = abiz;
+		nan = dni;
 				
-		for(int i=0; i<izena.length(); i++) {
+			izena=izena.substring(0, 1).toUpperCase()+izena.substring(1).toLowerCase();
 			
-			izena=izena.substring(0, 1).toUpperCase()+izena.substring(1, izena.length()).toLowerCase();
-			
-		}
+		
 	
 		
-		for(int i=0; i<abizena.length();i++) {
+		
 			
-			abizena=abizena.substring(0, 1).toUpperCase()+abizena.substring(1, izena.length()).toLowerCase();
+			abizena=abizena.substring(0, 1).toUpperCase()+abizena.substring(1, abizena.length()).toLowerCase();
 
-		}		
 	}
 	
 	public Pertsona(String izena, String abizena) {

@@ -46,6 +46,25 @@ public class Gela {
 		return distantzia;
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Gela [gelaZenbakia=" + gelaZenbakia + ", oinarrizkoPrezioa=" + oinarrizkoPrezioa + ", okupatua="
+				+ okupatua + ", p=" + p + "]";
+	}
+
+	public int getGelaZenbakia() {
+		return gelaZenbakia;
+	}
+
+	public void setGelaZenbakia(int gelaZenbakia) {
+		this.gelaZenbakia = gelaZenbakia;
+	}
+
+	public boolean isOkupatua() {
+		return okupatua;
+	}
+	
 	
 	
 }

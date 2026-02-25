@@ -4,7 +4,8 @@ public class Nagusia {
 	
 	public static void main(String[] args) {
 		
-		BezeroOrokorra b1=new BezeroOrokorra("Ashley", "Contreras", "58005150R");
+		
+		BezeroOrokorra b1=new BezeroOrokorra("ASHley", "Contreras", "58005150R");
 		System.out.println(b1);
 		System.out.println();
 		System.out.println(b1.ordainketaKalkulatu(450));
@@ -12,9 +13,24 @@ public class Nagusia {
 		VIPBezeroa v1=new VIPBezeroa("Ismail", "Achlouch", "56789378S", 23);
 		System.out.println(v1);
 		System.out.println();
-		System.out.println(v1.deskontuaAplikatu(23));
 		System.out.println(v1.ordainketaKalkulatu(330));
+		System.out.println();
 		
+		Gela g1=new Gela(3, 350);
+		System.out.println(g1);
+		System.out.println();
+		System.out.println(g1.bezeroaEsleitu(v1));
+		System.out.println();
+		
+		Hotel h1=new Hotel(4, 5);
+		h1.ikusi();
+		System.out.println(h1.getGelenMatrizea()[0][0]);
+		h1.erreserbakIkusi();
+		h1.erreserbatu(2, 2, b1);
+		h1.erreserbakIkusi();
+		h1.erreserbatu(3, 5, b1);
+		h1.erreserbakIkusi();
+
 	}
 
 }

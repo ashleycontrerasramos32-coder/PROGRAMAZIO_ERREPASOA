@@ -1,0 +1,38 @@
+package Aste3;
+
+public class Hotel {
+	
+	private Gela [][] gelenMatrizea;
+	
+	private String erreserbak [];
+	
+	
+	public Hotel(int solairuKop, int gelaKop) {
+		
+		
+		this.gelenMatrizea=new Gela[solairuKop][gelaKop];
+		
+		erreserbak=new String[2000];
+		
+		int kontErreserbak=0;
+		
+		for (int i = 0; i < solairuKop ; i++) {
+			for (int j = 0; j < gelaKop; j++) {
+				gelenMatrizea[i][j]=new Gela(i*100+(j+1), (int)(Math.random()*51+100));
+			}
+			
+		}
+
+
+	}
+	
+	public void ikusi() {
+		for (int i = 0; i < gelenMatrizea.length ; i++) {
+			for (int j = 0; j < gelenMatrizea[i].length; j++) {
+				System.out.print(gelenMatrizea[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+	
+}
