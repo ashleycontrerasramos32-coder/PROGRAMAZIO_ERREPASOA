@@ -11,10 +11,8 @@ public class VIPBezeroa extends Pertsona implements Deskontagarria {
 		String kateBakarra="";
 		String aux=kateBakarra.trim();
 		
-		for(int i=0; i<izena.length(); i++) {
-			for(int j=0; j<abizena.length();j++) {
-				kateBakarra="Izena: "+izena+" eta abizena: "+abizena;
-			}
+		for(int i=0; i<kateBakarra.length(); i++) {
+				kateBakarra=izena+abizena;
 		}
 		System.out.println(aux);
 		

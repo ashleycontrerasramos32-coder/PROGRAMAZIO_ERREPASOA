@@ -41,7 +41,7 @@ public class Gela {
 		
 		double distantzia=0;
 		
-		distantzia=Math.sqrt(Math.pow(p.getX(), 2))+(Math.pow(p.getY(), 2));
+		distantzia=(double)(Math.sqrt(Math.pow(p.getX(), 2)+(Math.pow(p.getY(), 2))));
 	
 		return distantzia;
 		
